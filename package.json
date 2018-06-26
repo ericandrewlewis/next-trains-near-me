@@ -2,6 +2,7 @@
   "name": "next-local-subways",
   "version": "0.1.0",
   "proxy": "http://localhost:4567",
+  "heroku-postbuild": "npm run build",
   "private": true,
   "dependencies": {
     "concurrently": "^3.6.0",
