@@ -5,26 +5,31 @@ import "./style.css";
 
 class App extends Component {
   render() {
-    return <Geolocation
-      onSuccess={console.log}
-      maximumAge={120}
-      render={({
-        fetchingPosition,
-        position: { coords: { latitude, longitude } = {} } = {},
-        error,
-        getCurrentPosition
-      }) =>
-        <div>
-          {error &&
+    return (
+      <div class="app">
+        <Geolocation
+          onSuccess={console.log}
+          maximumAge={120}
+          render={({
+            fetchingPosition,
+            position: { coords: { latitude, longitude } = {} } = {},
+            error,
+            getCurrentPosition
+          }) =>
             <div>
-              {error.message}
+
+              {error &&
+                <div>
+                  {error.message}
+                </div>}
+              {!fetchingPosition && !error && <SubwayDeparturesPage
+                latitude={latitude}
+                longitude={longitude}
+              />}
             </div>}
-          {/* {!fetchingPosition && !error &&  */<SubwayDeparturesPage
-            latitude={40.7215098}
-            longitude={-73.9871648}
-          />}
-        </div>}
-      />
+          />
+      </div>
+    );
   }
 }
 

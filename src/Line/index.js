@@ -6,7 +6,7 @@ class Line extends Component {
   render() {
     return (
       <div className="line">
-        <h2>{this.props.name}</h2>
+        <h2 class="line-name">{this.props.name}</h2>
         <div className="northbound-southbound-wrapper">
           <div className="northbound">
             <h3>Northbound</h3>
