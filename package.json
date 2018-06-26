@@ -1,0 +1,23 @@
+{
+  "name": "next-local-subways",
+  "version": "0.1.0",
+  "proxy": "http://localhost:4567",
+  "private": true,
+  "dependencies": {
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "moment-timezone": "^0.5.21",
+    "mta-realtime-subway-departures": "0.0.8",
+    "mta-subway-complexes": "0.0.1",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-geolocation": "^1.0.3",
+    "react-scripts": "1.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

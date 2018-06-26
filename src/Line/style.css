@@ -1,0 +1,7 @@
+.line .northbound-southbound-wrapper {
+  display: flex;
+}
+
+.northbound, .southbound {
+  padding: 1rem;
+}
