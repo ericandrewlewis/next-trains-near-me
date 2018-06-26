@@ -1,0 +1,79 @@
+.departure {
+  position: relative;
+  height: 2rem;
+}
+
+.departure .route-icon {
+  font-weight: bold;
+  position: absolute;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  text-align: center;
+  padding-top: 0.3rem;
+}
+
+.departure .route-N,
+.departure .route-Q,
+.departure .route-R,
+.departure .route-W {
+  background: #FCCC0A;
+}
+
+.departure .route-4,
+.departure .route-5,
+.departure .route-5X,
+.departure .route-6,
+.departure .route-6X {
+  color: white;
+  background: #00933C;
+}
+
+.departure .route-B,
+.departure .route-D,
+.departure .route-F,
+.departure .route-M {
+  color: white;
+  background: #FF6319;
+}
+
+.departure .route-L {
+  color: white;
+  background: #808183;
+}
+
+.departure .route-G {
+  color: white;
+  background: #6CBE45;
+}
+
+.departure .route-J,
+.departure .route-Z {
+  color: white;
+  background: #996633;
+}
+
+.departure .route-7 {
+  color: white;
+  background: #B933AD;
+}
+
+.departure .route-A,
+.departure .route-C,
+.departure .route-E {
+  color: white;
+  background: #0039A6;
+}
+
+.departure .route-1,
+.departure .route-2,
+.departure .route-3 {
+  color: white;
+  background: #EE352E;
+}
+
+.departure .time {
+  position: absolute;
+  padding-top: 0.3rem;
+  left: 2rem;
+}

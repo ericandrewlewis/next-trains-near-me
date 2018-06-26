@@ -6,6 +6,13 @@
   display: flex;
 }
 
-.northbound, .southbound {
+.line .northbound,
+.line .southbound {
   padding: 1rem;
+}
+
+.line .northbound-heading,
+.line .southbound-heading {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
 }

@@ -6,7 +6,7 @@ import "./style.css";
 class App extends Component {
   render() {
     return (
-      <div class="app">
+      <div className="app">
         <Geolocation
           onSuccess={console.log}
           maximumAge={120}
