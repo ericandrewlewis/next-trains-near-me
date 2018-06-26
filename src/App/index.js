@@ -17,11 +17,16 @@ class App extends Component {
             getCurrentPosition
           }) =>
             <div>
-
               {error &&
                 <div>
                   {error.message}
                 </div>}
+              {fetchingPosition &&
+                <div>
+                  <h2 className="loading-message">Determining your location...</h2>
+                  <h2 className="loading-message">🌍🌎🌏</h2>
+                </div>
+              }
               {!fetchingPosition && !error && <SubwayDeparturesPage
                 latitude={latitude}
                 longitude={longitude}
