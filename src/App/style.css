@@ -3,11 +3,14 @@
 }
 
 body {
+  color: #0F1A20;
   font-family: 'Roboto', sans-serif;
 }
 
 .app {
   padding: 1rem;
+  max-width: 25rem;
+  margin: 0 auto;
 }
 
 .loading-message {

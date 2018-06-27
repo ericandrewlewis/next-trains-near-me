@@ -1,5 +1,10 @@
+.line {
+  margin-bottom: 1rem;
+}
+
 .line .line-name {
   font-size: 1.5rem;
+  text-align: center;
 }
 
 .line .northbound-southbound-wrapper {
@@ -8,11 +13,14 @@
 
 .line .northbound,
 .line .southbound {
-  padding: 1rem;
+  padding: 1rem 1rem 0;
+  width: 50%;
 }
 
 .line .northbound-heading,
 .line .southbound-heading {
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
+  border-bottom: 0.05rem solid black;
+  padding-bottom: 0.5rem;
 }

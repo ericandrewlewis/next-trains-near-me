@@ -1,4 +1,10 @@
+.complex {
+  border-bottom: 0.1rem solid #0F1A20;
+  margin-bottom: 1.5rem;
+}
+
 .complex .complex-name {
+  font-weight: bold;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
