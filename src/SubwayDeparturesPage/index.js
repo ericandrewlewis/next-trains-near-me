@@ -30,9 +30,15 @@ class SubwayDeparturesPage extends Component {
     this.state = {
       responses: []
     }
+    this.fetchDepartures = this.fetchDepartures.bind(this);
   }
 
   componentDidMount() {
+    this.fetchDepartures();
+    setInterval(this.fetchDepartures, 30000);
+  }
+
+  fetchDepartures() {
     const { latitude, longitude } = this.props;
     const nearbyComplexes = getNearbyComplexes({complexes, latitude, longitude });
     let url = '/api/departures.json?' + nearbyComplexes.map(complex => `complexIds[]=${complex.id}`).join('&');
