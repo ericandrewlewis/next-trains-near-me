@@ -17,6 +17,7 @@ class App extends Component {
             getCurrentPosition
           }) =>
             <div>
+              <h1 class="website-title">🚈 Next Trains Near Me ⏱</h1>
               {error &&
                 <div>
                   {error.message}

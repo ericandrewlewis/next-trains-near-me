@@ -9,13 +9,18 @@ body {
 
 .app {
   padding: 1rem;
-  max-width: 25rem;
+  max-width: 26rem;
   margin: 0 auto;
 }
 
-.loading-message {
+.app .loading-message {
   font-size: 2rem;
   text-align: center;
   line-height: 1.5;
   margin-bottom: 1rem;
+}
+
+.app .website-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
