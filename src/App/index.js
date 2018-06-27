@@ -17,7 +17,7 @@ class App extends Component {
             getCurrentPosition
           }) =>
             <div>
-              <h1 class="website-title">🚈 Next Trains Near Me ⏱</h1>
+              <h1 className="website-title">Next Trains 🚈 🌎 ⏱</h1>
               {error &&
                 <div>
                   {error.message}
@@ -28,7 +28,11 @@ class App extends Component {
                   <h2 className="loading-message">🌍🌎🌏</h2>
                 </div>
               }
-              {!fetchingPosition && !error && <SubwayDeparturesPage
+              {!fetchingPosition && !error && process.env.NODE_ENV === 'development' && <SubwayDeparturesPage
+                latitude={40.7359}
+                longitude={-73.9911}
+              />}
+              {!fetchingPosition && !error && process.env.NODE_ENV === 'production' && <SubwayDeparturesPage
                 latitude={latitude}
                 longitude={longitude}
               />}
