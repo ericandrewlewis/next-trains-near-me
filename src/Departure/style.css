@@ -4,7 +4,7 @@
 }
 
 .departure .route-icon {
-  font-weight: bold;
+  font-weight: 500;
   position: absolute;
   border-radius: 50%;
   width: 1.5rem;
