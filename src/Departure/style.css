@@ -60,7 +60,8 @@
 
 .departure .route-A,
 .departure .route-C,
-.departure .route-E {
+.departure .route-E,
+.departure .route-H {
   color: white;
   background: #0039A6;
 }
@@ -71,6 +72,14 @@
   color: white;
   background: #EE352E;
 }
+
+.departure .route-FS,
+.departure .route-GS {
+  color: white;
+  background: #808183;
+}
+
+
 
 .departure .time {
   position: absolute;

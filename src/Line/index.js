@@ -8,8 +8,8 @@ const lineToBoundsMap = {
     S: 'Queens'
   },
   ['6th Av - Culver']: {
-    N: 'Northbound',
-    S: 'Southbound'
+    N: 'Man-Bx-Qns',
+    S: 'Brooklyn'
   },
   Canarsie: {
     N: '8 Av',
@@ -20,9 +20,45 @@ const lineToBoundsMap = {
     S: 'Brooklyn'
   },
   ['Broadway - Brighton']: {
-    N: 'Uptown',
+    N: 'Man-Bx-Qns',
     S: 'Brooklyn'
-  }
+  },
+  ['8th Av - Fulton St']: {
+    N: 'Manhattan-Qns',
+    S: 'Brooklyn'
+  },
+  ['Crosstown']: {
+    N: 'Queens',
+    S: 'Brooklyn'
+  },
+  ['4th Av']: {
+    N: 'Man-Bx-Qns',
+    S: 'Brooklyn'
+  },
+  ['Eastern Pky']: {
+    N: 'Manhattan-Bx',
+    S: 'Brooklyn'
+  },
+  ["Franklin Shuttle"]: {
+    N: 'Franklin Av',
+    S: 'Prospect Park'
+  },
+  ["Broadway - 7Av"]: {
+    N: 'Manhattan-Bx',
+    S: 'Brooklyn'
+  },
+  ["Lexington - Shuttle"]: {
+    N: 'Times Square',
+    S: 'Grand Central'
+  },
+  ["Flushing"]: {
+    N: 'Queens',
+    S: 'Manhattan'
+  },
+  "Rockaway": {
+    N: 'Broad Channel',
+    S: 'Rockaway Beach'
+  },
 }
 
 const getLineBound = (lineName, direction) => {
