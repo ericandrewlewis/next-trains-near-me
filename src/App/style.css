@@ -20,7 +20,34 @@ body {
   margin-bottom: 1rem;
 }
 
+.app .globe {
+  position: relative;
+  animation: move-globe 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  margin: 0 0.5rem;
+}
+.app .globe-2 {
+  animation-delay: 0.2s;
+}
+
+.app .globe-3 {
+  animation-delay: 0.4s;
+}
+
 .app .website-title {
   font-size: 2rem;
   margin-bottom: 2rem;
+}
+
+@keyframes move-globe {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 1rem;
+  }
+  100% {
+    top: 0;
+  }
 }

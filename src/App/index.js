@@ -67,7 +67,11 @@ class App extends Component {
               {fetchingPosition &&
                 <div>
                   <h2 className="loading-message">Determining your location...</h2>
-                  <h2 className="loading-message">🌍🌎🌏</h2>
+                  <h2 className="loading-message">
+                    <span class="globe globe-1">🌍</span>
+                    <span class="globe globe-2">🌎</span>
+                    <span class="globe globe-3">🌏</span>
+                  </h2>
                 </div>
               }
               {!fetchingPosition && !error && process.env.NODE_ENV === 'development' && <SubwayDeparturesPage
