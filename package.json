@@ -8,7 +8,7 @@
     "concurrently": "^3.6.0",
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
-    "mta-realtime-subway-departures": "0.0.12",
+    "mta-realtime-subway-departures": "0.0.13",
     "mta-subway-complexes": "0.0.2",
     "mta-subway-stations": "0.0.2",
     "point-in-polygon": "^1.0.1",
