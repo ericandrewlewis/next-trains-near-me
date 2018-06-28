@@ -3,9 +3,10 @@ import Geolocation from "react-geolocation";
 import SubwayDeparturesPage from '../SubwayDeparturesPage';
 import "./style.css";
 const locations = [
+  // City Hall
   {
-    lat: 40.6872257,
-    long: -73.9737066
+    lat: 40.7136119,
+    long: -74.0051314
   },
   {
     lat: 40.7359,
@@ -31,6 +32,12 @@ const locations = [
     lat: 40.5805469,
     long: -73.8396189
   },
+  // Union square
+  {
+    lat: 40.7356751,
+    long: -73.9922806
+  },
+
 ];
 
 class App extends Component {
@@ -59,8 +66,8 @@ class App extends Component {
                 </div>
               }
               {!fetchingPosition && !error && process.env.NODE_ENV === 'development' && <SubwayDeparturesPage
-                latitude={locations[5].lat}
-                longitude={locations[5].long}
+                latitude={locations[2].lat}
+                longitude={locations[2].long}
               />}
               {!fetchingPosition && !error && process.env.NODE_ENV === 'production' && <SubwayDeparturesPage
                 latitude={latitude}

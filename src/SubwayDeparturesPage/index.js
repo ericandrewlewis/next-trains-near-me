@@ -52,13 +52,19 @@ class SubwayDeparturesPage extends Component {
   }
   
   render() {
+    const { latitude, longitude } = this.props;
     return (
       <div>
         {this.state.responses.map(response => {
           return (
-            <Complex key={response.name} 
+            <Complex
+              key={response.complexId}
+              id={response.complexId}
               name={response.name} 
-              lines={response.lines} />
+              lines={response.lines}
+              latitude={latitude}
+              longitude={longitude}
+            />
           );
         })}
       </div>
