@@ -78,6 +78,10 @@ class App extends Component {
                 latitude={latitude}
                 longitude={longitude}
               />}
+              <h2 style={{marginTop: '7rem'}}>
+                Made with 💛 by <a style={{color: '#0F1A20'}} href="https://ericandrewlewis.com/">Eric Lewis</a>
+                &nbsp;<a style={{color: '#0F1A20'}} href="https://github.com/ericandrewlewis/next-trains-near-me">source on Github</a>
+                </h2>
             </div>}
           />
       </div>
