@@ -21,16 +21,30 @@ const inDowntownManhattan = (lat, long) => {
   return inside([lat, long], downtownManhattan);
 }
 
-const getDestinationStations = (departures) => {
-  const destinationIds = unique(
-    departures.map(departure => departure.destinationStationId)
-  );
-  return destinationIds.map(destinationId => {
-    return subwayStations.find(station => station['Station ID'] === destinationId);
+
+
+const getDestinationInfos = (departures) => {
+  const uniqueDepartures = departures.reduce((items, departure) => {
+    if (!items.find(item => item.destinationStationId === departure.destinationStationId)) {
+      items.push(departure);
+    }
+    return items;
+  }, []);
+
+  return uniqueDepartures.map(departure => {
+    const station = subwayStations.find(station => station['Station ID'] === departure.destinationStationId);
+
+    if (!station) {
+      return null;
+    }
+    return {
+      routeId: departure.routeId,
+      station
+    }
   // Filter the stations next because we don't have a map for every three-character
   // subway abbreviation and station ID.
   // I should probably log misses somewhere.
-  }).filter(value => value !== undefined);
+  }).filter(value => value !== null);
 }
 
 const boroughMap = {
@@ -43,8 +57,29 @@ const boroughMap = {
 const expandBorough = borough => boroughMap[borough];
 
 const getBoundTitle = ({currentBorough, departures, direction}) => {
-  const destinationStations = getDestinationStations(departures);
-  let titles = destinationStations.reduce((titles, station) => {
+  const destinationInfos = getDestinationInfos(departures);
+  let titles = destinationInfos.reduce((titles, destinationInfo) => {
+    const {routeId, station} = destinationInfo;
+    if (currentBorough === 'M') {
+      if (destinationInfo['routeId'] === 'J') {
+        if (station['Borough'] === 'Q') {
+          titles.boroughs.push('Brooklyn');
+          return titles;
+        }
+      }
+      if (destinationInfo['routeId'] === 'M') {
+        if (station['Station ID'] === '108') {
+          titles.boroughs.push('Brooklyn');
+          return titles;
+        }
+      }
+      if (destinationInfo['routeId'] === 'A') {
+        if (station['Borough'] === 'Q') {
+          titles.boroughs.push('Brooklyn');
+          return titles;
+        }
+      }
+    }
     if (station['Borough'] === currentBorough) {
       titles.stops.push(station['Stop Name']);
     } else {
