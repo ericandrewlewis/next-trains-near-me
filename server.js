@@ -13,8 +13,8 @@ app.use("/static", express.static("./build/static/"));
 const client = createClient(process.env.MTA_API_KEY);
 
 // Set the port based on the environment variable (PORT=8080 node server.js)
-// and fallback to 4567
-const PORT = process.env.PORT || 4567;
+// and fallback to 8080
+const PORT = process.env.PORT || 8080;
 
 app.get('/api/departures.json', (request, response) => {
   const complexIds = request.query.complexIds;
