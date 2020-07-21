@@ -59,7 +59,9 @@ class App extends Component {
             getCurrentPosition
           }) =>
             <div>
-              <h1 className="website-title">Next Trains 🚈 🌎 ⏱</h1>
+              <h1 className="website-title">
+                Next Trains <span role="img" aria-label="Next subway near me">🚈 🌎 ⏱</span>
+              </h1>
               {error &&
                 <div>
                   {error.message}
@@ -68,9 +70,9 @@ class App extends Component {
                 <div>
                   <h2 className="loading-message">Determining your location...</h2>
                   <h2 className="loading-message">
-                    <span class="globe globe-1">🌍</span>
-                    <span class="globe globe-2">🌎</span>
-                    <span class="globe globe-3">🌏</span>
+                    <span class="globe globe-1" role="img" aria-label="Loading">🌍</span>
+                    <span class="globe globe-2" role="img" aria-label="Loading">🌎</span>
+                    <span class="globe globe-3" role="img" aria-label="Loading">🌏</span>
                   </h2>
                 </div>
               }
@@ -82,12 +84,12 @@ class App extends Component {
                 latitude={latitude}
                 longitude={longitude}
               />}
-              <h2 style={{margin: '7rem 0'}}>
-                Made with 💛 by <a style={{color: '#0F1A20'}} href="https://ericandrewlewis.com/">Eric Lewis</a>
-                &nbsp;<a style={{color: '#0F1A20'}} href="https://github.com/ericandrewlewis/next-trains-near-me">source on Github</a>
-                </h2>
+              <h2 style={{ margin: '7rem 0' }}>
+                Made with <span role="img" aria-label="love">💛</span> by <a style={{ color: '#0F1A20' }} href="https://ericandrewlewis.com/">Eric Lewis</a>
+                &nbsp;<a style={{ color: '#0F1A20' }} href="https://github.com/ericandrewlewis/next-trains-near-me">source on Github</a>
+              </h2>
             </div>}
-          />
+        />
       </div>
     );
   }

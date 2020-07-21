@@ -48,7 +48,8 @@ class SubwayDeparturesPage extends Component {
         this.setState({
           responses
         });
-      });
+      })
+      .catch(err => console.log(err));
   }
   
   render() {
