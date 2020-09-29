@@ -9,7 +9,6 @@ const app = express();
 
 app.use("/static", express.static("./build/static/"));
 
-
 const client = createClient(process.env.MTA_API_KEY);
 
 // Set the port based on the environment variable (PORT=8080 node server.js)
