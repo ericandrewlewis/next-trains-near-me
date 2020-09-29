@@ -1,7 +1,7 @@
 {
   "name": "next-local-subways",
   "version": "0.1.0",
-  "proxy": "http://localhost:4567",
+  "proxy": "http://localhost:8080",
   "private": true,
   "dependencies": {
     "array-unique": "^0.3.2",
