@@ -8,7 +8,7 @@
     "concurrently": "^5.3.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "mta-realtime-subway-departures": "^1.0.0",
+    "mta-realtime-subway-departures": "git+https://github.com/ericandrewlewis/mta-realtime-subway-departures.git#tmp-1",
     "mta-subway-complexes": "0.0.2",
     "mta-subway-stations": "0.0.2",
     "nodemon": "^2.0.4",
