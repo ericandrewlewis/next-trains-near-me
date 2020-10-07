@@ -11,6 +11,7 @@ class Complex extends Component {
         {lines.map(line => {
           return <Line
             key={line.name}
+            stationId={line.stationId}
             complexId={id}
             name={line.name}
             latitude={latitude}
